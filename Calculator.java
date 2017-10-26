@@ -21,10 +21,10 @@ public class Calculator {
         return a/b;
     }
 
-    public static double power(double a, double b){
-        double answer =a;
-
-        for (int x=2; x<=b; x++){
+   public static double power(double a, double b){
+        double answer =1;
+        
+        for (int x=1; x<=b; x++){
             answer *= a;
         }
 
@@ -58,6 +58,8 @@ public class Calculator {
                     break;
                 case '^': answer = power(inputA, inputB);
                     break;
+                default: System.out.println("wrong input");
+                    return;
             }
 
             System.out.println(answer);
